@@ -24,9 +24,11 @@ int main(){
     cin >> mi;
 
     for(int i = 0; i < mi.size();i++){
-        if(('a'<=mi[i] && mi[i]<='z') || ('A'<=mi[i] && mi[i] <= 'Z')){
-            cout << 26 - mi[i] + 1;
-        }else{
+        if('a'<=mi[i] && mi[i]<='z'){
+            cout << (char)('z' - mi[i] + 'a');
+        }else if('A'<=mi[i] && mi[i] <= 'Z'){
+            cout << (char)('Z' - mi[i] + 'A');
+        } else{ // 不是字母 原样输出
             cout << mi[i];
         }
     }
